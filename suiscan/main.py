@@ -9,7 +9,7 @@ Prerequisites:
 2. Set environment variable: GOOGLE_APPLICATION_CREDENTIALS=config/bigquery_credentials.json
 3. Install dependencies: google-cloud-bigquery, polars, pyarrow
 """
-
+# %%
 import os
 from pathlib import Path
 import polars as pl
@@ -21,7 +21,9 @@ print("🚀 Sui Explorer - Milestone 1")
 print("=" * 50)
 
 # Check if credentials are set up
-credentials_path = Path("config/bigquery_credentials.json")
+script_dir = Path(__file__).parent.parent  # Go up from suiscan/main.py to root
+credentials_path = script_dir / "config" / "bigquery_credentials.json"
+
 if not credentials_path.exists():
     print("⚠️  Warning: BigQuery credentials not found!")
     print("📁 Please place your service account key at: config/bigquery_credentials.json")
