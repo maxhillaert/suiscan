@@ -13,7 +13,7 @@ Prerequisites:
 import os
 from pathlib import Path
 import polars as pl
-from data.fetcher import create_fetcher
+from suiscan.data.fetcher import create_fetcher
 
 # %%
 # Configuration and Setup
