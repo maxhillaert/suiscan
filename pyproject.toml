@@ -1,0 +1,27 @@
+[project]
+name = "sui-explorer"
+version = "0.1.0"
+description = "Lightweight blockchain explorer tool for the Sui network"
+authors = ["Your Name <your.email@example.com>"]
+requires-python = ">=3.9"
+dependencies = [
+    "google-cloud-bigquery>=3.13.0",
+    "polars>=0.20.0",
+    "pyarrow>=14.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.20.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.20.0",
+] 
